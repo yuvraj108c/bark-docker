@@ -15,15 +15,15 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install wheel && \
     pip install -r requirements.txt
 
+# Download models
+RUN . ./venv/bin/activate && \
+    python -c "from bark import preload_models; preload_models()"
+
 # Install other dependencies
 RUN --mount=type=cache,target=/root/.cache/pip \
     . ./venv/bin/activate && \
-    pip install gradio jupyterlab
+    pip install gradio==3.50.2 jupyterlab
 
 COPY --chmod=755 scripts/* ./
-
-# Download models
-RUN . ./venv/bin/activate && \ 
-    python preload_models.py
 
 CMD ["./start.sh"]

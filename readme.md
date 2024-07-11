@@ -10,7 +10,7 @@
 ## Tags
 | Tag    | Description              | Size      |
 | ------ | ------------------------ | --------- |
-| latest | python 3.8, stable audio 1 | ~ 19.2 GB |
+| latest | python 3.8, bark | ~ 19.2 GB |
 
 ## Ports
 

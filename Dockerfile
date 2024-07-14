@@ -26,4 +26,4 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 COPY --chmod=755 scripts/* ./
 
-CMD ["./start.sh"]
+CMD ["/workspace/bark/start.sh"]
